@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennect</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="w-[100%] h-[650px] flex items-center justify-center">
+        <div class="w-[350px] h-[590px] bg-white border">
+            <div class="w-full h-16 bg-white flex items-center">
+                <img src="/Resource/Copy of Artboard 1full logo.png" alt="" class="w-18 h-16 ml-4">
+                <button data-ripple-light="true" data-popover-target="menu"
+                    class="text-black disabled:pointer-events-none ml-56" onclick="Menu(this)" name="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+
+                <div class="flex-col w-72 p-4 rounded-md shadow-lg space-y-6 text-sm bg-white absolute top-[100px] ml-4 transition-all ease-in duration-500 opacity-0"
+                    id="menuOption">
+                    <ul class="flex-col text-[#004749] space-y-2">
+                        <li class="cursor-pointer">Solutions</li>
+                        <li class="cursor-pointer">Industries</li>
+                        <li class="cursor-pointer">Resources</li>
+                        <li class="cursor-pointer">Company</li>
+                        <li class="cursor-pointer">Pricing</li>
+                    </ul>
+                    <button
+                        class="text-white block bg-[#ff4261] pl-4 pr-4 md:rounded-2xl rounded-md p-1 font-semibold">BOOK
+                        A MEETING</button>
+                    <button class="border-2 md:rounded-2xl p-1 rounded-md pl-4 pr-4 text-black">Login</button>
+                </div>
+            </div>
+
+            <div class="w-full h-96 bg-[#047d80]">
+                <div class="w-full text-center pt-4">
+                    <p class="font-bold text-white">Run your <span class="text-[#4af9fc]">sales</span> <br>
+                        <span class="text-[#4af9fc]">compensation</span> programs
+                    </p>
+                    <p class="inline-flex items-center text-white font-bold">in <img
+                            src="/Resource/cruise mode! desktop.png" alt="" class="w-32 h-4 ml-1">
+                    </p>
+                    <p class="text-white text-xs mt-2 ">
+                        Build, run and automate your incentive compensation plans <br> to create transparency and
+                        achive operational efficiency
+                    </p>
+
+                    <div class="w-60 bg-white ml-14 mt-4 rounded-2xl overflow-hidden">
+                        <input type="text" class="w-32 p-1 text-xs" placeholder="Enter your work email">
+                        <button class="bg-[#ff4261] text-white text-xs pl-2 pr-2 pt-1 pb-1 m-1 rounded-xl">BOOK A
+                            DEMO</button>
+                    </div>
+
+                    <p class="text-white text-[6px] mt-2">
+                        By submitting this form, you are agreeing to Kennect's <u>Privacy Policy</u> and <u>Terms of
+                            Service.</u>
+                    </p>
+
+                    <div class="w-full flex items-center justify-center mt-4 space-x-4">
+                        <img src="/Resource/G2 rating home page.png" alt="" class="h-10">
+                        <img src="/Resource/Gartner rating home page.png" alt="" class="h-10">
+                    </div>
+                    <div class="w-full flex items-center justify-center mt-4 space-x-4">
+                        <img src="/Resource/SalesCompensation_HighPerformer_HighPerformer copy.png" alt="" class="h-20">
+                        <img src="/Resource/SalesCompensation_EasiestToDoBusinessWith_Enterprise_EaseOfDoingBusinessWith copy.png"
+                            alt="" class="h-20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-fit text-center bg-white pt-4 space-y-2">
+                <h1 class="font-semibold">Trusted by</h1>
+                <div class="tech-slideshow flex w-full">
+                    <div class="mover-1 space-x-5">
+                        <img src="/Resource/Zydus white 1.png" alt="" class="w-32">
+                        <img src="/Resource/Swigg white 1.png" alt="" class="w-32">
+                        <img src="/Resource/Astrazeneca white 1.png" alt="" class="w-32">
+                        <img src="/Resource/Lonza white 1.png" alt="" class="w-32">
+                        <img src="/Resource/boehringer-ingelheim-international white 1.png" alt="" class="w-32">
+                        <img src="/Resource/sanofi white 1.png" alt="" class="w-32">
+                        <img src="/Resource/Lupin white 1.png" alt="" class="w-32">
+                        <img src="/Resource/Incyte white 1.png" alt="" class="w-32">
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function Menu(e) {
+            console.log(e.name);
+            let list = document.getElementById('menuOption');
+
+            e.name === 'menu' ? (e.name = 'close',
+                list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = 'menu', list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+        }
+    </script>
+    <script type="module" src="node_modules/@material-tailwind/html@latest/scripts/popover.js"></script>
+
+    <!-- from cdn -->
+    <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
+</body>
+
+</html>
